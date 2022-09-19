@@ -1,7 +1,7 @@
 STORE "inginPesan" with string "ya"
 
 WHILE "inginPesan" == "ya"
-  STORE "cek" with STRING FROM INPUT "Apakah anda ingin memesan kopi? (ya/tidak)"
+  STORE "cek" with STRING FROM INPUT "Apakah anda ingin memesan makanan? (ya/tidak)"
   IF "cek" == "ya"
     STORE "Menu makanan" with LIST
     WHILE TRUE
