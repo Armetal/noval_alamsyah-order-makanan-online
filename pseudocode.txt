@@ -1,0 +1,22 @@
+STORE "inginPesan" with string "ya"
+
+WHILE "inginPesan" == "ya"
+  STORE "cek" with STRING FROM INPUT "Apakah anda ingin memesan kopi? (ya/tidak)"
+  IF "cek" == "ya"
+    STORE "Menu makanan" with LIST
+    WHILE TRUE
+      STORE "pesanan" with STRING FROM INPUT "Masukan Nama Menu: "
+      ADD "pesanan" TO LIST"Menu makanan"
+      PRINT "Pesanan berupa {pesanan} telah ditambahkan ke dalam daftar"
+      STORE "pesanLagi" with STRING FROM INPUT "ingin memesan lagi? (ya/tidak)"
+      IF "pesanLagi" == "ya"
+        CONTINUE
+      ELIF "pesanLagi == "tidak"
+        PRINT "Terimakasih telah memesan, berikut daftar pesanan anda {Menu makanan}"
+        CLEAR LIST "Menu makanan"
+        STORE "inginPesan" with STRING "t"
+        BREAK
+      ELSE
+        PRINT "Masukkan input dengan benar"
+  ELSE
+    CONTINUE
